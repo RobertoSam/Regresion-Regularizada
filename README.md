@@ -1,50 +1,60 @@
-# Regresión Regularizada: Ridge, Lasso y Elastic Net
+# 📊 Regresiones Regularizadas: Ridge, Lasso y Elastic Net
 
-Este repositorio contiene un notebook interactivo con teoría y práctica de tres técnicas de regresión regularizada:
-- **Ridge** (penalización L2)
-- **Lasso** (penalización L1)
-- **Elastic Net** (combinación L1 + L2)
-
-## 📘 Objetivos del notebook
-
-- Comprender la motivación de la regularización en modelos lineales.
-- Comparar matemáticamente y gráficamente Ridge, Lasso y Elastic Net.
-- Aplicar cada técnica a un conjunto de datos reales (`Diabetes` de sklearn).
-- Visualizar las diferencias en los coeficientes estimados.
-- Evaluar rendimiento usando RMSE y R².
-
-## 📁 Archivos
-
-- `Regresion_Regularizada_Detallada.ipynb`: Notebook completo listo para ejecutar.
-- `trayectorias_regularizadas.ipynb`: Visualización de cómo los coeficientes cambian con alpha.
-
-## 🧪 Requisitos
-
-- Python ≥ 3.8
-- scikit-learn
-- matplotlib
-- numpy
-
-Instalación rápida:
-
-```bash
-pip install -r requirements.txt
-```
-
-## 🚀 Ejecutar en Google Colab
-
-[Haz clic aquí para abrir el notebook en Colab](https://colab.research.google.com/github/RobertoSam/Regresion-Regularizada/blob/main/Regresion_Regularizada_Detallada.ipynb)
-
-## 📊 Ejemplo de uso
-
-```python
-from sklearn.linear_model import Ridge
-model = Ridge(alpha=1.0)
-model.fit(X_train, y_train)
-```
-
-## 🤝 Autor
-
-Este material fue desarrollado como apoyo didáctico para estudiantes de la Maestría en Modelización Matemática y Computacional de la UNI (Perú).
+Este repositorio contiene una unidad completa sobre regresión regularizada en modelos lineales, orientada a estudiantes de maestría y profesionales en ciencia de datos y modelación matemática.
 
 ---
+
+## 📁 Contenido del repositorio
+
+| Archivo | Descripción |
+|--------|-------------|
+| `ridge_regression.ipynb` | Teoría, visualización e implementación completa de **Regresión Ridge** |
+| `lasso_regression.ipynb` | Teoría e implementación de **Regresión Lasso**, con enfoque en selección de variables |
+| `elasticnet_regression.ipynb` | Análisis de **Elastic Net**, mostrando cómo combina Ridge y Lasso |
+| `comparacion_modelos_regularizados.ipynb` | Comparación práctica y gráfica entre los tres modelos |
+
+---
+
+## 🎯 Objetivos de aprendizaje
+
+- Comprender las limitaciones de la regresión OLS y cómo la regularización las mitiga.
+- Conocer el fundamento teórico y geométrico de Ridge, Lasso y Elastic Net.
+- Aplicar cada técnica en un ejemplo real, analizar sus coeficientes y evaluar su rendimiento.
+- Validar los supuestos del modelo usando análisis de residuos.
+- Comparar los tres métodos y justificar su elección en problemas reales.
+
+---
+
+## ⚙️ Tecnologías utilizadas
+
+- Python 3.11
+- Scikit-learn
+- Numpy, Matplotlib, Seaborn
+- Statsmodels, Scipy
+
+---
+
+## 🚀 Ejecutar en línea
+
+- [Abrir Ridge en Google Colab](https://colab.research.google.com/github/RobertoSam/Regresion-Regularizada/blob/main/ridge_regression.ipynb)
+- [Abrir Lasso en Colab](https://colab.research.google.com/github/RobertoSam/Regresion-Regularizada/blob/main/lasso_regression.ipynb)
+- [Abrir Elastic Net en Colab](https://colab.research.google.com/github/RobertoSam/Regresion-Regularizada/blob/main/elasticnet_regression.ipynb)
+- [Comparación en Colab](https://colab.research.google.com/github/RobertoSam/Regresion-Regularizada/blob/main/comparacion_modelos_regularizados.ipynb)
+
+---
+
+## 📚 Aplicaciones actuales
+
+Las técnicas de regresión regularizada se usan ampliamente en:
+
+- Genómica y biología computacional
+- Marketing predictivo
+- Selección de variables en modelos con alta dimensionalidad
+- Modelos de series temporales con múltiples covariables
+
+---
+
+## 👨‍🏫 Autor
+
+Material desarrollado por un asistente académico especializado para la Maestría en Modelización Matemática y Computacional – UNI, Perú.
+
