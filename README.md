@@ -12,6 +12,7 @@ Este repositorio contiene una unidad completa sobre regresión regularizada en m
 | `lasso_regression.ipynb` | Teoría e implementación de **Regresión Lasso**, con enfoque en selección de variables |
 | `elasticnet_regression.ipynb` | Análisis de **Elastic Net**, mostrando cómo combina Ridge y Lasso |
 | `comparacion_modelos_regularizados.ipynb` | Comparación práctica y gráfica entre los tres modelos |
+| `graficos_regularizacion/` | Imágenes explicativas sobre las regiones geométricas de cada modelo |
 
 ---
 
@@ -22,6 +23,17 @@ Este repositorio contiene una unidad completa sobre regresión regularizada en m
 - Aplicar cada técnica en un ejemplo real, analizar sus coeficientes y evaluar su rendimiento.
 - Validar los supuestos del modelo usando análisis de residuos.
 - Comparar los tres métodos y justificar su elección en problemas reales.
+
+---
+
+## 🧠 Geometría de la regularización
+
+![Geometría de Ridge, Lasso y Elastic Net](graficos_regularizacion/A_2D_digital_illustration_displays_geometric_repre.png)
+
+> Este gráfico representa cómo la elección de la penalización impone distintas **regiones geométricas de solución**:
+> - **Ridge**: región circular → todos los coeficientes pequeños
+> - **Lasso**: región romboidal → muchos coeficientes exactamente cero
+> - **Elastic Net**: región curva intermedia → mezcla entre Ridge y Lasso
 
 ---
 
@@ -43,6 +55,34 @@ Este repositorio contiene una unidad completa sobre regresión regularizada en m
 
 ---
 
+
+---
+
+## 🛠 Instalación local rápida
+
+1. Clona este repositorio:
+```bash
+git clone https://github.com/RobertoSam/Regresion-Regularizada.git
+cd Regresion-Regularizada
+```
+
+2. Crea un entorno virtual (opcional pero recomendado):
+```bash
+python -m venv venv
+source venv/bin/activate  # En Windows: venv\Scripts\activate
+```
+
+3. Instala las dependencias:
+```bash
+pip install -r requirements.txt
+```
+
+4. Abre los notebooks:
+```bash
+jupyter notebook
+```
+
+
 ## 📚 Aplicaciones actuales
 
 Las técnicas de regresión regularizada se usan ampliamente en:
@@ -56,5 +96,5 @@ Las técnicas de regresión regularizada se usan ampliamente en:
 
 ## 👨‍🏫 Autor
 
-Material desarrollado por un asistente académico especializado para la Maestría en Modelización Matemática y Computacional – UNI, Perú.
-
+Material desarrollado por **Roberto Sam** para la Maestría en Modelización Matemática y Computacional – Universidad Nacional de Ingeniería (UNI), Perú.  
+Asistencia técnica y didáctica desarrollada con ayuda de un asistente académico especializado en matemáticas aplicadas y ciencia de datos.
