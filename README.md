@@ -28,7 +28,7 @@ Este repositorio contiene una unidad completa sobre regresión regularizada en m
 
 ## 🧠 Geometría de la regularización
 
-![Geometría de Ridge, Lasso y Elastic Net](graficos_regularizacion/A_2D_digital_illustration_displays_geometric_repre.png)
+![Geometría de Ridge, Lasso y Elastic Net](Graficos_regularizacion/A_2D_digital_illustration_displays_geometric_repre.png)
 
 > Este gráfico representa cómo la elección de la penalización impone distintas **regiones geométricas de solución**:
 > - **Ridge**: región circular → todos los coeficientes pequeños
