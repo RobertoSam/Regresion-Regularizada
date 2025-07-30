@@ -41,5 +41,3 @@ Estas formas geométricas explican visualmente **cómo y por qué** cada técnic
 - Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning*.
 - James, G., Witten, D., Hastie, T., & Tibshirani, R. (2013). *An Introduction to Statistical Learning*.
 - Zou, H., & Hastie, T. (2005). Regularization and variable selection via the elastic net.
-
----
