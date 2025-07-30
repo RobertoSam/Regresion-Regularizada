@@ -1,43 +1,54 @@
-# 🧠 Geometría de la Regularización
+# 📐 Geometría de la Regularización
 
-Las técnicas de regresión regularizada imponen restricciones geométricas sobre los coeficientes del modelo. Estas restricciones se traducen en **regiones factibles** que influyen en la forma en que se encuentran las soluciones óptimas.
+La regularización en regresión lineal introduce restricciones sobre los coeficientes del modelo mediante **penalizaciones**, que pueden interpretarse como **formas geométricas** en el espacio de parámetros. Estas formas afectan directamente cómo se obtiene la solución óptima.
 
 ---
 
-## 🎨 Comparación geométrica
+## 🔍 Intuición geométrica
+
+Imaginemos que minimizamos el error cuadrático bajo una restricción en los coeficientes β. Cada tipo de regularización define una "región" alrededor del origen dentro de la cual buscamos la mejor solución.
+
+### 🟦 Ridge: Penalización L2
+
+- **Región geométrica**: **Círculo** o **esfera** en dimensiones mayores.
+- **Penalización**: `||β||²₂ ≤ t`
+- **Efecto**: Empuja los coeficientes hacia cero, pero raramente exactamente cero.
+- **Visualización**: Las curvas de error (óvalos) intersectan el círculo suavemente → todos los coeficientes son pequeños.
+
+### ◼️ Lasso: Penalización L1
+
+- **Región geométrica**: **Rombo** o **octaedro** en alta dimensión.
+- **Penalización**: `||β||₁ ≤ t`
+- **Efecto**: Favorece soluciones esparsas → muchos coeficientes exactamente cero.
+- **Visualización**: Los vértices del rombo aumentan la probabilidad de "chocar" en el borde → selección de variables.
+
+### 🔷 Elastic Net: Combinación L1 + L2
+
+- **Región geométrica**: Forma **curva intermedia** entre círculo y rombo.
+- **Penalización**: `α||β||₁ + (1 - α)||β||²₂`
+- **Efecto**: Control balanceado entre reducción de coeficientes y esparsidad.
+- **Visualización**: Superficie de intersección que combina los efectos anteriores.
+
+---
+
+## 🖼️ Representación visual
 
 ![Geometría de Ridge, Lasso y Elastic Net](graficos_regularizacion/A_2D_digital_illustration_features_three_geometric.png)
 
-Este gráfico muestra las regiones de penalización para cada método:
+La imagen compara visualmente las regiones de penalización para cada técnica. El punto óptimo del modelo (mínimo del error cuadrático) se proyecta dentro de estas regiones:
 
-- 🔵 **Ridge**: penaliza con la norma L2 → región **circular**  
-  Favorece coeficientes pequeños pero no exactamente cero.  
-  ➕ Bueno para **multicolinealidad**.
-
-- ◼️ **Lasso**: penaliza con la norma L1 → región **romboidal**  
-  Tiende a empujar coeficientes exactamente a cero.  
-  ➕ Útil para **selección de variables**.
-
-- 🔷 **Elastic Net**: mezcla L1 + L2 → región **intermedia**  
-  Combina esparsidad con estabilidad.  
-  ➕ Eficiente cuando hay **muchas variables correlacionadas**.
+- En **Ridge**, la solución suaviza todos los coeficientes.
+- En **Lasso**, algunos coeficientes se hacen cero.
+- En **Elastic Net**, hay un compromiso entre ambos extremos.
 
 ---
 
-## 🎯 ¿Por qué importa la geometría?
+## 📚 Lecturas recomendadas
 
-El punto óptimo del modelo (mínimo del error cuadrático) se ve modificado por estas regiones:
-
-- En **Ridge**, el mínimo se proyecta dentro del círculo → coeficientes pequeños.
-- En **Lasso**, el mínimo puede "chocar" con los vértices del rombo → coeficientes cero.
-- En **Elastic Net**, la solución transita entre ambas geometrías.
-
-Estas formas geométricas explican visualmente **cómo y por qué** cada técnica actúa diferente.
+- T. Hastie, R. Tibshirani, J. Friedman — *The Elements of Statistical Learning*.
+- G. James et al. — *An Introduction to Statistical Learning*.
+- Zou & Hastie (2005) — *Regularization and variable selection via the elastic net*.
 
 ---
 
-## 📚 Referencias recomendadas
-
-- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning*.
-- James, G., Witten, D., Hastie, T., & Tibshirani, R. (2013). *An Introduction to Statistical Learning*.
-- Zou, H., & Hastie, T. (2005). Regularization and variable selection via the elastic net.
+Esta geometría explica **por qué** Lasso selecciona variables, Ridge estabiliza soluciones, y Elastic Net combina lo mejor de ambos.
