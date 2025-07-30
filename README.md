@@ -30,23 +30,25 @@ Este repositorio contiene una unidad completa sobre regresión regularizada en m
 
 ## 🧠 Geometría de la regularización
 
-Cuando aplicamos regularización en regresión lineal, añadimos una restricción que **limita el tamaño de los coeficientes**. Esta restricción impone una región geométrica que depende de la norma utilizada:
+Cuando aplicamos regularización en regresión lineal, añadimos una restricción que **limita el tamaño de los coeficientes**. Esta restricción define una **región geométrica** en el espacio de parámetros, y varía según el tipo de penalización:
 
-| Método         | Penalización               | Región geométrica      | Efecto típico                               |
-|----------------|----------------------------|-------------------------|---------------------------------------------|
-| **Ridge**      | \( \sum \beta_j^2 \)       | Círculo / Esfera        | Coeficientes pequeños, ninguno exactamente cero |
-| **Lasso**      | \( \sum |\beta_j| \)       | Rombos / Poliedros      | Algunos coeficientes exactamente cero       |
-| **Elastic Net**| \( \alpha L1 + (1 - \alpha) L2 \) | Región intermedia | Combinación de selección y estabilidad      |
+| Método        | Penalización                                | Región geométrica        | Efecto típico                                      |
+|---------------|---------------------------------------------|---------------------------|----------------------------------------------------|
+| **Ridge**     | ∑ β²  (norma L2)                            | Círculo / Esfera          | Coeficientes pequeños, raramente exactamente cero |
+| **Lasso**     | ∑ |β| (norma L1)                            | Rombos / Poliedros        | Algunos coeficientes exactamente cero             |
+| **Elastic Net**| α ∑ |β| + (1 - α) ∑ β² (mixta L1 + L2)     | Región curva intermedia   | Selección + estabilidad con variables correlacionadas |
 
-📌 El punto óptimo se encuentra donde la elipse de error (función de pérdida) toca esta región de penalización:
+📌 La solución del modelo se encuentra en el punto donde la elipse de error (curva de nivel de la pérdida cuadrática) **toca** el borde de esta región.
 
 ![Geometría Ridge, Lasso y Elastic Net](graficos_regularizacion/A_2D_digital_illustration_features_three_geometric.png)
 
-> Las formas geométricas ayudan a entender por qué **Lasso tiende a eliminar variables** (vértices angulados del rombo) y **Ridge las conserva pequeñas** (borde suave de la esfera).
+> Las formas geométricas ayudan a explicar:
+> - Por qué **Lasso** elimina coeficientes (por sus vértices angulosos).
+> - Por qué **Ridge** los reduce sin hacerlos cero (por su borde suave).
+> - Cómo **Elastic Net** combina ambos comportamientos según α.
 
-🔍 Para una explicación más profunda, incluyendo fórmulas, teoría y bibliografía, consulta el archivo:
-
-📄 [`geometria_regularizacion.md`](geometria_regularizacion.md)
+📄 Para una explicación teórica completa con fórmulas, intuición y referencias:  
+[geometria_regularizacion.md](geometria_regularizacion.md)
 
 ---
 
