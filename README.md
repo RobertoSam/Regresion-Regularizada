@@ -61,7 +61,7 @@ Cuando aplicamos regularización en regresión lineal, añadimos una restricció
 
 ## 🚀 Ejecutar en línea
 
-- [Notebook completo en Colab](https://colab.research.google.com/github/RobertoSam/Regresion-Regularizada/blob/main/regresion_regularizada_completa.ipynb)
+- [Notebook completo en Colab](https://colab.research.google.com/github/RobertoSam/Regresion-Regularizada/blob/main/regresion_regularizada_completa_final.ipynb)
 - [Abrir Ridge en Google Colab](https://colab.research.google.com/github/RobertoSam/Regresion-Regularizada/blob/main/ridge_regression.ipynb)
 - [Abrir Lasso en Colab](https://colab.research.google.com/github/RobertoSam/Regresion-Regularizada/blob/main/lasso_regression.ipynb)
 - [Abrir Elastic Net en Colab](https://colab.research.google.com/github/RobertoSam/Regresion-Regularizada/blob/main/elasticnet_regression.ipynb)
