@@ -30,8 +30,6 @@ Este repositorio contiene una unidad completa sobre regresión regularizada en m
 
 ## 🧠 Geometría de la regularización
 
-## 🧠 Geometría de la regularización
-
 Cuando aplicamos regularización en regresión lineal, añadimos una restricción que **limita el tamaño de los coeficientes**. Esta restricción define una **región geométrica** en el espacio de parámetros, y varía según el tipo de penalización:
 
 | Método         | Penalización                                    | Región geométrica        | Efecto típico                                      |
