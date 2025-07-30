@@ -30,13 +30,15 @@ Este repositorio contiene una unidad completa sobre regresión regularizada en m
 
 ## 🧠 Geometría de la regularización
 
+## 🧠 Geometría de la regularización
+
 Cuando aplicamos regularización en regresión lineal, añadimos una restricción que **limita el tamaño de los coeficientes**. Esta restricción define una **región geométrica** en el espacio de parámetros, y varía según el tipo de penalización:
 
-| Método        | Penalización                                | Región geométrica        | Efecto típico                                      |
-|---------------|---------------------------------------------|---------------------------|----------------------------------------------------|
-| **Ridge**     | ∑ β²  (norma L2)                            | Círculo / Esfera          | Coeficientes pequeños, raramente exactamente cero |
-| **Lasso**     | ∑ |β| (norma L1)                            | Rombos / Poliedros        | Algunos coeficientes exactamente cero             |
-| **Elastic Net**| α ∑ |β| + (1 - α) ∑ β² (mixta L1 + L2)     | Región curva intermedia   | Selección + estabilidad con variables correlacionadas |
+| Método         | Penalización                                    | Región geométrica        | Efecto típico                                      |
+|----------------|--------------------------------------------------|---------------------------|----------------------------------------------------|
+| **Ridge**      | ∑ β²  (norma L2)                                 | Círculo / Esfera          | Coeficientes pequeños, raramente exactamente cero |
+| **Lasso**      | ∑ \|β\| (norma L1)                               | Rombos / Poliedros        | Algunos coeficientes exactamente cero             |
+| **Elastic Net**| α ∑ \|β\| + (1 − α) ∑ β² (mixta L1 + L2)         | Región curva intermedia   | Selección + estabilidad con variables correlacionadas |
 
 📌 La solución del modelo se encuentra en el punto donde la elipse de error (curva de nivel de la pérdida cuadrática) **toca** el borde de esta región.
 
@@ -49,7 +51,6 @@ Cuando aplicamos regularización en regresión lineal, añadimos una restricció
 
 📄 Para una explicación teórica completa con fórmulas, intuición y referencias:  
 [geometria_regularizacion.md](geometria_regularizacion.md)
-
 ---
 
 ## ⚙️ Tecnologías utilizadas
